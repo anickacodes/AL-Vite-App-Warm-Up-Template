@@ -1,4 +1,4 @@
-# Instructions for Warm-Up Exercise
+# Instructions for Exercise
 
 ## Fork and Clone Repository
 1. Fork this repository.
@@ -11,7 +11,7 @@
    npm i
    ```
 
-# Warm-Up Exercise
+#  Exercise
 
 ## Part 1:
 
