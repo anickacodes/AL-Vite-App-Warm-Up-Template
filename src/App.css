@@ -1,9 +1,10 @@
 body{
-    background-color: gray;
+    background: linear-gradient(22deg,#52eeee, #87e0ee, rgba(165, 94, 63, 0.868), #b98976, #ee7752, #f2948e, #e73c7e);
+    animation: gradient 15s ease alternate;
+    background-size: 200% 200%;
 }
 
 .square1 {
-
  background-color: blueviolet;
  height: 200px;
  width: 200px;
@@ -26,3 +27,17 @@ width: 200px;
  width: 200px;
 
 }
+
+@keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  

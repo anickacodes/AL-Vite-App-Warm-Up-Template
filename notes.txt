@@ -54,3 +54,65 @@ box1 {
 		background-position: 0% 50%;
 	}
 }
+
+
+import { useState } from 'react';
+import '../App.css';
+
+// Import audio files
+import bluevioletSound from './path/to/blueviolet-sound.mp3';
+import aquaSound from './path/to/aqua-sound.mp3';
+import goldSound from './path/to/gold-sound.mp3';
+
+const Square = () => {
+  const [squares, setSquares] = useState(['blueviolet', 'aqua', 'gold']);
+
+  // Function to play sound based on color
+  const playSound = (color) => {
+    let audio;
+    switch (color) {
+      case 'blueviolet':
+        audio = new Audio(bluevioletSound);
+        break;
+      case 'aqua':
+        audio = new Audio(aquaSound);
+        break;
+      case 'gold':
+        audio = new Audio(goldSound);
+        break;
+      default:
+        return;
+    }
+    audio.play();
+  };
+
+  const handleSquareClick = (index) => {
+    const colorSquareArr = squares.map((color, i) => {
+      if (i === index) {
+        const newColor =
+          color === 'blueviolet' ? 'aqua' : color === 'aqua' ? 'gold' : 'blueviolet';
+        playSound(newColor);
+        return newColor;
+      }
+      return color;
+    });
+    setSquares(colorSquareArr);
+  };
+
+  return (
+    <div className='squares'>
+      {squares.map((element, index) => (
+        <div
+          key={index}
+          style={{ backgroundColor: element }}
+          className='square'
+          onClick={() => handleSquareClick(index)}
+        >
+          {index}
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default Square;
