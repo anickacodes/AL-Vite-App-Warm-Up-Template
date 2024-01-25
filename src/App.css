@@ -1,43 +1,47 @@
-body{
-    background: linear-gradient(22deg,#52eeee, #87e0ee, rgba(165, 94, 63, 0.868), #b98976, #ee7752, #f2948e, #e73c7e);
+body {
+    background: linear-gradient(22deg, #52eeee, #87e0ee, rgba(165, 94, 63, 0.868), #b98976, #ee7752, #f2948e, #e73c7e);
     animation: gradient 15s ease alternate;
     background-size: 200% 200%;
 }
 
-.square1 {
+/* .square1 {
  background-color: blueviolet;
  height: 200px;
  width: 200px;
 }
-
-
 .square2{
-
 background-color: aqua;
 height: 200px;
 width: 200px;
-
 }
-
-
 .square3{
-
  background-color: gold;
  height: 200px;
  width: 200px;
+} */
 
+.squares {
+    height: 600px;
+    width: 600px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 11px;
+}
+
+.square {
+border-radius: 12px;
 }
 
 @keyframes gradient {
     0% {
-      background-position: 0% 50%;
+        background-position: 0% 50%;
     }
+
     50% {
-      background-position: 100% 50%;
+        background-position: 100% 50%;
     }
+
     100% {
-      background-position: 0% 50%;
+        background-position: 0% 50%;
     }
-  }
-  
-  
+}

@@ -37,6 +37,11 @@ const Square = () => {
     setSquares(colorSquareArr);
   }
 
+  const addSquare = () => {
+    const newColor = "purple";
+    setSquares([...squares, newColor]);
+  };
+
   return (
     <div className="squares">
       {squares.map((element, index) => (
@@ -49,6 +54,7 @@ const Square = () => {
           {index}
         </div>
       ))}
+      <button onClick={addSquare}>Add Square</button>
       <MIDISounds ref={midiSounds} appElementName="root" instruments={[3]} />
     </div>
   );
