@@ -35,3 +35,5 @@
 
 **Note:** Feel free to style and customize the exercise based on your creativity and preferences. Have fun coding!
 
+### Resources used
+[MIDI REACT Sounds](https://github.com/surikov/midi-sounds-react)
