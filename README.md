@@ -37,3 +37,5 @@
 
 ### Resources used
 [MIDI REACT Sounds](https://github.com/surikov/midi-sounds-react)
+
+[Deployed Site](https://square-dance.netlify.app/)
