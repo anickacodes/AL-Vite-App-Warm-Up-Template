@@ -8,7 +8,7 @@ const Square = () => {
   const [squares, setSquares] = useState(["purple", "aqua", "gold", "orange"]);
   const midiSounds = useRef(null);
   const [instrument, setInstrument] = useState(0);
-  const [instrumentVolume, setInstrumentVolume] = useState(null);
+  const [instrumentVolume, setInstrumentVolume] = useState(2);
 
   function handleSquareClick(index) {
     const colorSquareArr = squares.map((color, i) => {
@@ -41,8 +41,8 @@ const Square = () => {
       purple: [61], //C#3
       aqua: [62], //D3
       gold: [65], //F3
-      orange: [71], //B3
-      teal: [88], //E6
+      orange: [67], 
+      teal: [69], 
     };
     console.log(
       `Playing sound with instrument ID: ${instrument}, Note: ${soundMap[color]}`
